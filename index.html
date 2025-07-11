@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practice bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- 🔒 Tap to Continue Overlay -->
+  <div id="tapOverlay" onclick="startSite()" style="
+    position: fixed;
+    inset: 0;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    text-align: center;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    opacity: 1;
+    transition: opacity 1s ease;
+   ">
+    <p style="font-size: 20px; animation: pulse 1.5s infinite;">Tap to Continue</p>
+    <p style="font-size: 14px; margin-top: 30px; opacity: 0.7; max-width: 80%; font-style: italic;">
+      A memory is a photograph taken by the heart, stored in silence, and framed by time.”
+      <br><br>— Unknown
+    </p>
+
+  </div>
+
+  <!-- 🎵 Background Music -->
+  <audio id="bgMusic"
+    src="image/Iframe Through The Years - Kenney Rogers (Saddest Version) _ Clyde Pianist [Uc66pCK16vc].mp3"
+    preload="auto" loop></audio>
+  <style>
+    @keyframes pulse {
+      0% {
+        opacity: 0.4;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+
+      100% {
+        opacity: 0.4;
+        transform: scale(1);
+      }
+    }
+  </style>
+  <script>
+    function startSite() {
+      window.scrollTo(0, 0);
+      const overlay = document.getElementById('tapOverlay');
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none'; // disable clicks
+      document.getElementById('bgMusic').play();
+
+      // Optional: Remove the element from DOM after fade
+      setTimeout(() => {
+        overlay.style.display = 'none';
+      }, 1000); // matches transition: 1s
+    }
+
+  </script>
+  <!-- 🌐 Main Website -->
+  <div id="mainSite" style="opacity: 0; transition: opacity 1s ease;">
+
+    </style>
+    <h1 class="Name"></h1>
+    <style>
+      .Name {
+        color: black;
+        text-align: center;
+
+      }
+    </style>
+    </head>
+
+    <body>
+      <div style="background-color: #d9d7cf; padding: 60px 20px 10px 20px;">
+
+        <!-- 📸 Single Photo with Label Section -->
+        <section class="single-photo-section1">
+          <div class="photo-wrapper">
+            <img src="image/ashtine.jpg" alt="A Special Moment">
+            <p class="photo-caption">“Andres and Austine”</p>
+            <p class="photo-caption1">
+              "Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its
+              destination full of hope."<br><br>— Maya Angelou
+            </p>
+          </div>
+        </section>
+
+      </div>
+
+      <style>
+        .single-photo-section1 {
+          background-color: transparent;
+          padding: 60px 20px 15px;
+          text-align: center;
+          font-family: 'Georgia', serif;
+          border-radius: 40px;
+          margin-top: -60px;
+        }
+
+        .photo-wrapper img {
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+          border-radius: 10px;
+          box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-caption {
+          margin-top: 20px;
+          font-size: 18px;
+          color: #555;
+          font-style: italic;
+        }
+
+        .photo-caption1 {
+          margin-top: 20px;
+          font-size: 10px;
+          color: #555;
+          font-style: italic;
+        }
+
+        /* ✅ Mobile responsiveness for iPhones and small Android devices */
+        @media (max-width: 414px) {
+          .photo-caption {
+            font-size: 16px;
+          }
+
+          .photo-caption1 {
+            font-size: 9.5px;
+          }
+
+          .photo-wrapper img {
+            max-width: 100%;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .photo-caption {
+            font-size: 15px;
+          }
+
+          .photo-caption1 {
+            font-size: 9px;
+          }
+        }
+      </style>
+
+      <!-- 📩 Message and Bible Verse Section with Background -->
+      <div class="message-bg-section">
+        <div class="container">
+          <div class="message-note p-4 mx-auto">
+            <h2 class="text-center mb-3"></h2>
+
+            <!-- Message Section -->
+            <p class="editable-message">
+              My dearest love,
+              <br><br>
+              There are a thousand ways to say “I love you,” but none will ever capture just how deeply I feel for you.
+              <br>
+              Since the day you walked into my life, everything has changed. Your presence has filled spaces in me I
+              never knew were empty.<br><br>
+              You are not just my partner — you are my peace, my strength, and the gentle rhythm to every beat of my
+              heart.<br>
+
+              Every moment with you becomes a memory I want to keep forever — the quiet smiles, the shared glances, the
+              comfort of your hand in mine. <br><br>
+              You make ordinary days extraordinary just by being there. In your love, I have found a home.<br>
+
+              Sometimes I sit in silence and wonder how I got so lucky. <br>
+              I promise to always cherish you, protect you, and walk beside you through every season of life.<br><br>
+              No matter what we face, I will choose you — today, tomorrow, and every day after.<br>
+
+              Thank you for loving me in all the ways I never thought I deserved.
+              <br><br><br>
+
+            <div class="signature">– Andres Mulach</div>
+            </p>
+          </div>
+
+          <footer class="bible-footer">
+            <div class="container text-center">
+              <p class="verse-text">"Love is patient, love is kind. It does not envy, it does not boast, it is not
+                proud."</p>
+              <span class="verse-ref">— 1 Corinthians 13:4</span>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <style>
+        /* 🌸 Background wrapper for message + bible footer */
+        .message-bg-section {
+          background-color: #d9d7cf;
+          padding: 60px 20px;
+        }
+
+        /* Signature */
+        .signature {
+          text-align: right;
+          font-style: italic;
+          margin-top: 20px;
+          font-weight: 500;
+          color: #444;
+        }
+
+        /* Message style */
+        .editable-message {
+          font-family: "PT Serif", serif;
+          font-style: italic;
+          color: #333;
+          line-height: 1.8;
+          margin-top: -100px;
+        }
+
+        /* Bible Verse Footer */
+        .bible-footer {
+          padding: 30px 20px;
+          font-family: 'Georgia', serif;
+          margin-top: 60px;
+        }
+
+        .bible-footer .verse-text {
+          font-size: 10px;
+          font-style: italic;
+          margin-bottom: 8px;
+          color: #333;
+        }
+
+        .bible-footer .verse-ref {
+          font-size: 14px;
+          color: #555;
+        }
+      </style>
+
+
+
+      <div class="carousel-quote text-center">
+        <p class="quote-text">
+          "Each photo holds a piece of our story. Every smile, every glance, frozen in time. Together, they create a
+          carousel of memories I’ll never stop cherishing."
+        </p>
+      </div>
+      <style>
+        .carousel-quote {
+          margin-bottom: 20px;
+          padding: 100px 20px;
+        }
+
+        .quote-text {
+          font-size: 18px;
+          font-style: italic;
+          color: #555;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+      </style>
+      <!-- Carousel photo section -->
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <!-- Repeat 2x for seamless loop -->
+          <div class="carousel-item-custom"><img src="image/1.jpg" alt="1"></div>
+          <div class="carousel-item-custom"><img src="image/2.jpg" alt="2"></div>
+          <div class="carousel-item-custom"><img src="image/3.jpg" alt="3"></div>
+          <div class="carousel-item-custom"><img src="image/4.jpg" alt="4"></div>
+          <div class="carousel-item-custom"><img src="image/5.jpg" alt="5"></div>
+
+          <div class="carousel-item-custom"><img src="image/1.jpg" alt="1"></div>
+          <div class="carousel-item-custom"><img src="image/2.jpg" alt="2"></div>
+          <div class="carousel-item-custom"><img src="image/3.jpg" alt="3"></div>
+          <div class="carousel-item-custom"><img src="image/4.jpg" alt="4"></div>
+          <div class="carousel-item-custom"><img src="image/5.jpg" alt="5"></div>
+        </div>
+      </div>
+
+      <!-- Modal for zoom view -->
+      <div class="zoom-modal" id="zoomModal">
+        <span class="close-btn" id="closeZoom">&times;</span>
+        <img class="zoomed-img" id="zoomedImg" src="" alt="Zoomed Photo">
+      </div>
+
+      <style>
+        /* Carousel styles */
+        .carousel-wrapper {
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          background: #ffffff;
+          padding: 30px 0;
+          margin-top: -75px;
+        }
+
+        .carousel-track {
+          display: flex;
+          animation: scroll 25s linear infinite;
+          width: fit-content;
+          will-change: transform;
+          /* improve performance on all devices */
+        }
+
+        .carousel-item-custom {
+          flex: 0 0 220px;
+          margin: 1px;
+          cursor: pointer;
+        }
+
+        .carousel-item-custom img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 0;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+
+        .carousel-item-custom:hover img {
+          transform: scale(1.03);
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        /* Responsive (Mobile) */
+        @media (max-width: 768px) {
+          .carousel-track {
+            animation-duration: 20s;
+            /* Slightly faster on mobile */
+          }
+
+          .carousel-item-custom {
+            flex: 0 0 160px;
+          }
+
+          .carousel-item-custom img {
+            height: 120px;
+          }
+        }
+
+        /* Zoom Modal */
+        .zoom-modal {
+          display: none;
+          position: fixed;
+          z-index: 9999;
+          padding-top: 50px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.85);
+          backdrop-filter: blur(5px);
+          justify-content: center;
+          align-items: center;
+          animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .zoomed-img {
+          max-width: 90%;
+          max-height: 80%;
+          border-radius: 12px;
+          box-shadow: 0 0 15px #000;
+          animation: zoomIn 0.4s ease-in-out;
+          image-rendering: -webkit-optimize-contrast;
+          backface-visibility: hidden;
+        }
+
+        .close-btn {
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          font-size: 36px;
+          color: white;
+          cursor: pointer;
+          z-index: 10000;
+        }
+
+        @keyframes zoomIn {
+          from {
+            transform: scale(0.7);
+            opacity: 0;
+          }
+
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+      </style>
+
+      <script>
+        // Zoom modal logic
+        const modal = document.getElementById("zoomModal");
+        const zoomedImg = document.getElementById("zoomedImg");
+        const closeBtn = document.getElementById("closeZoom");
+
+        document.querySelectorAll('.carousel-item-custom img').forEach(img => {
+          img.addEventListener('click', () => {
+            zoomedImg.src = img.src;
+            modal.style.display = 'flex';
+          });
+        });
+
+        closeBtn.addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+      </script>
+
+      <footer class="bible-footer">
+        <div class="container text-center">
+          <p class="verse-text">“Above all, love each other deeply, because love covers over a multitude of sins.”</p>
+          <span class="verse-ref">— 1 Peter 4:8</span>
+        </div>
+      </footer>
+      <style>
+        .bible-footer {
+          padding: 30px 20px;
+          font-family: 'Georgia', serif;
+          margin-top: 0px;
+        }
+
+        .bible-footer .verse-text {
+          font-size: 10px;
+          font-style: italic;
+          margin-bottom: 8px;
+          color: #333;
+        }
+
+        .bible-footer .verse-ref {
+          font-size: 14px;
+          color: #555;
+        }
+      </style>
+      <!-- 🎬 Full-Width Responsive Video Section -->
+      <section class="full-video-section">
+        <h2 class="video-heading">A Moment in Motion</h2>
+
+        <!-- Video trigger for zoom -->
+        <video class="full-width-video" id="videoThumbnail" autoplay muted loop playsinline>
+          <source src="image/andresvideo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <p class="video-message">
+          "This video is more than motion — it’s a story of us, told without words."
+        </p>
+      </section>
+
+      <!-- 🎥 Modal Zoom for Video -->
+      <div class="video-modal" id="videoModal">
+        <span class="close-video" id="closeVideo">&times;</span>
+        <video class="zoomed-video" controls muted autoplay playsinline>
+          <source src="image/andresvideo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <style>
+        /* Base section */
+        .full-video-section {
+          background-color: #d9d7cf;
+          padding: 40px 0;
+          text-align: center;
+          font-family: 'Georgia', serif;
+        }
+
+        .video-heading {
+          font-family: 'Great Vibes', cursive;
+          font-size: 28px;
+          margin-bottom: 20px;
+          color: #5c5c5c;
+        }
+
+        .full-width-video {
+          width: 100%;
+          height: auto;
+          max-height: 450px;
+          object-fit: cover;
+          display: block;
+          margin: 0 auto;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          filter: grayscale(100%);
+          cursor: pointer;
+          transition: transform 0.3s ease;
+        }
+
+        .full-width-video:hover {
+          transform: scale(1.02);
+        }
+
+        .video-message {
+          font-size: 16px;
+          color: #444;
+          margin-top: 20px;
+          padding: 0 20px;
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+          font-style: italic;
+        }
+
+        /* Modal Styles */
+        .video-modal {
+          display: none;
+          position: fixed;
+          z-index: 10000;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          /* ✅ Fallback background (always visible) */
+          background-color: rgba(0, 0, 0, 0.85);
+
+          /* ✅ Only works on iOS 13+, modern browsers */
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+
+          justify-content: center;
+          align-items: center;
+          animation: fadeIn 0.4s ease;
+          flex-direction: column;
+        }
+
+        .zoomed-video {
+          max-width: 90%;
+          max-height: 80%;
+          border-radius: 10px;
+          box-shadow: 0 0 20px #000;
+          animation: zoomIn 0.4s ease-in-out;
+        }
+
+        .close-video {
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          font-size: 36px;
+          color: white;
+          cursor: pointer;
+          z-index: 10001;
+        }
+
+        /* Animations */
+        @keyframes zoomIn {
+          from {
+            transform: scale(0.7);
+            opacity: 0;
+          }
+
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .video-heading {
+            font-size: 20px;
+          }
+
+          .full-width-video {
+            max-height: 250px;
+          }
+
+          .video-message {
+            font-size: 14px;
+          }
+
+          .zoomed-video {
+            max-width: 100%;
+            max-height: 60%;
+          }
+        }
+      </style>
+
+      <script>
+        const videoModal = document.getElementById("videoModal");
+        const videoThumb = document.getElementById("videoThumbnail");
+        const closeVideo = document.getElementById("closeVideo");
+
+        videoThumb.addEventListener("click", () => {
+          videoModal.style.display = "flex";
+        });
+
+        closeVideo.addEventListener("click", () => {
+          videoModal.style.display = "none";
+          const zoomedVideo = videoModal.querySelector("video");
+          zoomedVideo.pause(); // stop playback
+        });
+      </script>
+
+
+      <section class="custom-white-section">
+        <div class="content">
+          <p class="main-paragraph">"The beauty of a person lives in the heart that loves without condition."</p>
+        </div>
+      </section>
+      <style>
+        .custom-white-section {
+          background-color: none;
+          padding: 60px 20px;
+          text-align: center;
+          width: 100%;
+        }
+
+        .custom-white-section .content {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .custom-white-section .main-paragraph {
+          font-size: 20px;
+          color: #333;
+          margin-bottom: 20px;
+        }
+
+        .custom-white-section .notes {
+          font-size: 16px;
+          color: #666;
+          font-style: italic;
+        }
+      </style>
+
+      <!-- 📸 Single Photo with Label Section -->
+      <section class="single-photo-section">
+        <div class="photo-wrapper">
+          <picture>
+            <source srcset="image/greek.webp" type="image/webp">
+            <img src="image/greek.jpg" alt="A Special Moment">
+          </picture>
+
+          <p class="photo-caption">“Orpheus and Eurydice”</p>
+          <p class="photo-caption1">“What they had was not bound in by life. It was written in the soul”</p>
+        </div>
+      </section>
+
+      <style>
+        .single-photo-section {
+          background-color: transparent;
+          padding: 60px 20px 15px;
+          text-align: center;
+          font-family: 'Georgia', serif;
+          border-radius: 40px;
+          margin-top: -100px;
+        }
+      </style>
+
+      <style>
+        @keyframes pulse {
+          0% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+
+          50% {
+            opacity: 1;
+            transform: scale(1.05);
+          }
+
+          100% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+        }
+
+        .fade-out {
+          opacity: 0 !important;
+          pointer-events: none;
+        }
+      </style>
+
+      <!-- 🧠 Script -->
+      <script>
+        function startSite() {
+          window.scrollTo(0, 0);
+          const overlay = document.getElementById('tapOverlay');
+          const music = document.getElementById('bgMusic');
+          const mainSite = document.getElementById('mainSite');
+
+          // Fade out overlay
+          overlay.classList.add('fade-out');
+
+          // Fade in main site
+          mainSite.style.opacity = 1;
+
+          // Play music
+          music.play();
+
+          // Hide overlay after transition (optional)
+          setTimeout(() => {
+            overlay.style.display = 'none';
+          }, 1000);
+        }
+      </script>
+
+      </section>
+
+      <!-- 🎬 Video Section -->
+      <section class="video-section1">
+        <h2 class="video-heading">"This kind of love, I found it in you".</h2>
+
+        <div class="video-wrapper">
+          <video autoplay muted loop playsinline>
+            <source src="image/eldercouple.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <p class="video-caption">
+          "Just like in that video — two souls walking through time, aging side by side, never letting go.
+          That’s all I ever want: to grow old with you, quietly, completely, forever."
+        </p>
+      </section>
+
+      <style>
+        .video-section1 {
+          background-color: #d9d7cf;
+          padding: 40px 0;
+          margin: 0;
+          text-align: center;
+          font-family: 'Georgia', serif;
+        }
+
+        .video-heading {
+          font-size: 22px;
+          font-style: italic;
+          color: #5c5c5c;
+          margin-bottom: 20px;
+          padding: 0 20px;
+        }
+
+        .video-wrapper {
+          display: inline-block;
+          max-width: 100%;
+          background: black;
+          border-radius: 10px;
+        }
+
+        .video-wrapper video {
+          width: 100%;
+          max-width: 720px;
+          /* You can adjust this */
+          height: auto;
+          /* Maintain aspect ratio */
+          max-height: 360px;
+          /* ✅ Limit height without cropping left/right */
+          object-fit: contain;
+          /* 👈 Ensures no cropping, keeps full content */
+          background: black;
+          border-radius: 10px;
+          display: block;
+          margin: 0 auto;
+
+        }
+
+        .video-caption {
+          margin-top: 15px;
+          font-size: 16px;
+          color: #444;
+          font-style: italic;
+          padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+          .video-wrapper video {
+            max-width: 100%;
+          }
+
+          .video-heading {
+            font-size: 18px;
+          }
+
+          .video-caption {
+            font-size: 14px;
+            padding: 0 10px;
+          }
+        }
+      </style>
+
+      <!-- Memory Message Section -->
+      <section class="memory-message-section">
+        <div class="memory-message-box">
+          <p class="memory-message">
+            “This isn't just data. It's emotion. It's love. It's a reminder that even in silence, I'm always with you.
+            <br><br>
+            Thank you for holding onto this. This memory lives in your hands now — close to your heart, where it
+            belongs.”
+          </p>
+        </div>
+      </section>
+
+      <style>
+        .memory-message-section {
+          background: #f7f5f0;
+          /* Soft beige tone */
+          padding: 60px 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .memory-message-box {
+          background: none;
+          border-radius: 16px;
+          padding: 40px 30px;
+          max-width: 700px;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+          text-align: center;
+        }
+
+        .memory-message {
+          font-size: 18px;
+          font-style: italic;
+          color: #444;
+          font-family: 'Georgia', serif;
+          line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+          .memory-message-box {
+            padding: 30px 20px;
+          }
+
+          .memory-message {
+            font-size: 16px;
+          }
+        }
+      </style>
+
+      <!-- 🔻 Footer Section -->
+      <footer class="site-footer">
+        <div class="footer-content">
+          <p>&copy; 2025 <span class="brand-name">PulseSync</span>. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <style>
+        .site-footer {
+          background-color: #d9d7cf;
+          color: black;
+          padding: 20px 0;
+          text-align: center;
+          font-family: 'Arial', sans-serif;
+        }
+
+        .footer-content {
+          max-width: 960px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        .brand-name {
+          font-weight: bold;
+          color: #101012;
+          /* Gold color - change if needed */
+          font-style: italic;
+        }
+
+        /* ✅ iPhone 13–SE, Android phones */
+        @media (max-width: 414px) {
+
+          .video-caption,
+          .photo-caption,
+          .memory-message {
+            font-size: 14px;
+          }
+
+          .video-heading {
+            font-size: 18px;
+          }
+
+          .video-wrapper video,
+          .full-width-video {
+            max-height: 240px;
+          }
+
+          .memory-message-box {
+            padding: 20px 15px;
+          }
+        }
+
+        /* ✅ Extra small phones: iPhone SE, small Androids */
+        @media (max-width: 360px) {
+
+          .video-caption,
+          .photo-caption,
+          .memory-message {
+            font-size: 13px;
+          }
+
+          .video-heading {
+            font-size: 16px;
+          }
+
+          .video-wrapper video {
+            max-height: 200px;
+          }
+        }
+
+
+        @media (max-width: 768px) {
+          .site-footer {
+            font-size: 14px;
+          }
+        }
+      </style>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    </body>
+
+</html>
